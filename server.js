@@ -14,6 +14,11 @@ app.use("/", (req, res) => {
     res.send("Hello World");
 });
 
+// 404 Handler
+app.use((req, res) => {
+    res.status(404).send("Sorry, can't find that!");
+  });
+
 //const connectDB = require("./config/db");
 //const env = require("./config/env");
 
